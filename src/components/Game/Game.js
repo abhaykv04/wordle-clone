@@ -16,9 +16,6 @@ function Game() {
   const [showBanner, setShowBanner] = useState(null);
 
   function addGuess(guess) {
-    if (guess.length !== 5 || guesses.find((item) => item.label === guess))
-      return;
-
     const nextGuesses = [...guesses, { id: Math.random(), label: guess }];
     setGuesses(nextGuesses);
 
